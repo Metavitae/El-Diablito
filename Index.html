@@ -7,7 +7,7 @@
 <title>El Diablito — Tu Número. Para Siempre.</title>
 <link rel="manifest" href="manifest.json">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Anton&display=swap');
 
   :root {
     --rojo: #C8001A;
@@ -27,7 +27,6 @@
     overflow-x: hidden;
   }
 
-  /* GRAIN TEXTURE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -38,21 +37,19 @@
     opacity: 0.4;
   }
 
-  /* HEADER — MASTHEAD ALARMA STYLE */
+  /* MASTHEAD */
   header {
     background: var(--rojo);
     padding: 8px 0 4px;
     border-bottom: 6px solid var(--negro);
-    position: relative;
   }
 
   .masthead-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 12px;
+    padding: 0 12px 4px;
     border-bottom: 2px solid var(--amarillo);
-    padding-bottom: 4px;
     margin-bottom: 4px;
   }
 
@@ -69,13 +66,15 @@
     padding: 6px 12px;
   }
 
+  /* ANTON = slab condensed display — Alarma energy, NOT cursive */
   .masthead-title h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 72px;
+    font-family: 'Anton', sans-serif;
+    font-size: 74px;
     color: var(--amarillo);
-    line-height: 0.85;
+    line-height: 0.88;
     text-shadow: 4px 4px 0 var(--negro);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   .masthead-title .diablo-sub {
@@ -84,7 +83,7 @@
     color: var(--crema);
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-top: 2px;
+    margin-top: 4px;
   }
 
   /* BREAKING BANNER */
@@ -102,7 +101,7 @@
   .breaking-tag {
     background: var(--rojo);
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 14px;
     padding: 2px 8px;
     white-space: nowrap;
@@ -117,7 +116,7 @@
     color: var(--negro);
     text-transform: uppercase;
     white-space: nowrap;
-    animation: marquee 12s linear infinite;
+    animation: marquee 18s linear infinite;
   }
 
   @keyframes marquee {
@@ -125,66 +124,39 @@
     to { transform: translateX(-100%); }
   }
 
-  /* HERO — FULL BLEED PHOTO */
+  /* HERO */
   .hero {
     position: relative;
     width: 100%;
-    height: 340px;
+    height: 360px;
     overflow: hidden;
     border-bottom: 5px solid var(--negro);
   }
 
-  /* IMAGE PLACEHOLDER ZONE A — HERO */
-  .img-zone {
+  .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
     display: block;
-    filter: contrast(1.2) saturate(0.8);
-  }
-
-  .img-placeholder {
-    width: 100%;
-    height: 100%;
-    background: #888;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    filter: contrast(1.2) saturate(0.8);
-  }
-
-  .img-placeholder span {
-    font-family: 'Oswald', sans-serif;
-    font-size: 10px;
-    color: rgba(255,255,255,0.7);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  .img-placeholder .zone-label {
-    font-size: 13px;
-    color: white;
-    font-weight: 700;
+    filter: contrast(1.25) saturate(0.75) brightness(0.85);
   }
 
   .hero-overlay {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.85));
-    padding: 40px 12px 14px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.88));
+    padding: 50px 12px 14px;
   }
 
   .hero-hed {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 38px;
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
     color: white;
-    line-height: 0.9;
+    line-height: 0.92;
     text-shadow: 2px 2px 0 var(--rojo);
     margin-bottom: 6px;
+    text-transform: uppercase;
   }
 
   .hero-deck {
@@ -195,13 +167,10 @@
     letter-spacing: 1px;
   }
 
-  /* STAMP */
   .hero-stamp {
     position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 80px;
-    height: 80px;
+    top: 14px; right: 14px;
+    width: 82px; height: 82px;
     background: var(--rojo);
     border: 4px solid var(--amarillo);
     border-radius: 50%;
@@ -214,7 +183,7 @@
   }
 
   .stamp-price {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 28px;
     color: var(--amarillo);
     line-height: 1;
@@ -229,7 +198,7 @@
     text-align: center;
   }
 
-  /* COLUMNS — NEWSPAPER LAYOUT */
+  /* NEWSPAPER COLUMNS */
   .newspaper {
     padding: 12px;
     display: grid;
@@ -238,9 +207,7 @@
     border-bottom: 4px double var(--negro);
   }
 
-  .col-full {
-    grid-column: 1 / -1;
-  }
+  .col-full { grid-column: 1 / -1; }
 
   .section-rule {
     border: none;
@@ -249,7 +216,7 @@
   }
 
   .section-label {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 10px;
     letter-spacing: 3px;
     color: var(--rojo);
@@ -258,11 +225,12 @@
   }
 
   .article-hed {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 22px;
-    line-height: 0.95;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    line-height: 1.0;
     color: var(--negro);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
   }
 
   .article-body {
@@ -272,29 +240,19 @@
     color: var(--tinta);
   }
 
-  /* PHOTO CARDS — SMALL */
+  /* PHOTO CARDS */
   .photo-card {
     border: 3px solid var(--negro);
     overflow: hidden;
-    margin-bottom: 8px;
+    margin-top: 8px;
   }
 
-  .photo-card-img {
+  .photo-card img {
     width: 100%;
-    height: 110px;
+    height: 120px;
     object-fit: cover;
     display: block;
-    filter: contrast(1.15) saturate(0.75);
-  }
-
-  .photo-card-placeholder {
-    width: 100%;
-    height: 110px;
-    background: #777;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    filter: contrast(1.2) saturate(0.7) sepia(0.1);
   }
 
   .photo-card-caption {
@@ -307,7 +265,7 @@
     letter-spacing: 0.5px;
   }
 
-  /* FEATURE STRIP — RED BAR */
+  /* FEATURE STRIP */
   .feature-strip {
     background: var(--rojo);
     border-top: 4px solid var(--negro);
@@ -316,20 +274,16 @@
   }
 
   .feature-strip h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 32px;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
     color: var(--amarillo);
     text-shadow: 2px 2px 0 var(--negro);
-    line-height: 0.9;
-    margin-bottom: 10px;
+    line-height: 0.95;
+    margin-bottom: 12px;
+    text-transform: uppercase;
   }
 
-  .feature-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
 
   .feature-list li {
     font-family: 'Oswald', sans-serif;
@@ -348,7 +302,7 @@
     margin-top: 2px;
   }
 
-  /* CLASIFICADOS / PRICING */
+  /* PRECIOS / CLASIFICADOS */
   .clasificados {
     padding: 12px;
     background: var(--crema);
@@ -356,8 +310,8 @@
   }
 
   .clasificados-header {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 28px;
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
     text-align: center;
     color: var(--negro);
     border-top: 3px solid var(--negro);
@@ -365,6 +319,7 @@
     padding: 4px 0;
     margin-bottom: 10px;
     letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   .precio-grid {
@@ -389,8 +344,7 @@
   .precio-card.destacado::before {
     content: '★ LO MÁS PEDIDO';
     position: absolute;
-    top: -10px;
-    left: 50%;
+    top: -10px; left: 50%;
     transform: translateX(-50%);
     background: var(--rojo);
     color: white;
@@ -402,23 +356,21 @@
   }
 
   .precio-nombre {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 16px;
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
     color: var(--negro);
     margin-bottom: 2px;
+    text-transform: uppercase;
   }
 
   .precio-monto {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 36px;
     color: var(--rojo);
     line-height: 1;
   }
 
-  .precio-monto span {
-    font-size: 14px;
-    color: var(--negro);
-  }
+  .precio-monto span { font-family: 'Oswald', sans-serif; font-size: 14px; color: var(--negro); }
 
   .precio-desc {
     font-family: 'Special Elite', serif;
@@ -436,46 +388,33 @@
   }
 
   .test-header {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 22px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
     color: var(--amarillo);
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: center;
+    text-transform: uppercase;
   }
 
   .testimonio {
     display: flex;
     gap: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     align-items: flex-start;
   }
 
-  /* IMAGE ZONE — TESTIMONIO PORTRAIT */
   .test-foto {
-    width: 54px;
-    height: 54px;
+    width: 58px; height: 58px;
     border: 3px solid var(--rojo);
     flex-shrink: 0;
     overflow: hidden;
     object-fit: cover;
-    filter: contrast(1.2) saturate(0.7) sepia(0.2);
+    object-position: center top;
+    filter: contrast(1.25) saturate(0.65) sepia(0.2);
   }
 
-  .test-foto-placeholder {
-    width: 54px;
-    height: 54px;
-    border: 3px solid var(--rojo);
-    flex-shrink: 0;
-    background: #555;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .test-texto {
-    flex: 1;
-  }
+  .test-texto { flex: 1; }
 
   .test-quote {
     font-family: 'Libre Baskerville', serif;
@@ -494,7 +433,7 @@
     letter-spacing: 1px;
   }
 
-  /* CTA — CALL TO ACTION */
+  /* CTA */
   .cta-section {
     padding: 16px 12px;
     background: var(--amarillo);
@@ -504,12 +443,13 @@
   }
 
   .cta-hed {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 36px;
     color: var(--negro);
-    line-height: 0.9;
+    line-height: 0.92;
     text-shadow: 2px 2px 0 var(--rojo);
     margin-bottom: 8px;
+    text-transform: uppercase;
   }
 
   .cta-body {
@@ -525,9 +465,9 @@
     width: 100%;
     background: var(--rojo);
     color: white;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
     padding: 14px;
     border: 4px solid var(--negro);
     cursor: pointer;
@@ -535,10 +475,11 @@
     box-shadow: 4px 4px 0 var(--negro);
     transition: transform 0.1s, box-shadow 0.1s;
     margin-bottom: 8px;
+    text-transform: uppercase;
   }
 
   .btn-principal:active {
-    transform: translate(2px, 2px);
+    transform: translate(2px,2px);
     box-shadow: 2px 2px 0 var(--negro);
   }
 
@@ -556,11 +497,6 @@
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background 0.15s;
-  }
-
-  .btn-secundario:active {
-    background: rgba(0,0,0,0.1);
   }
 
   /* MODAL */
@@ -574,9 +510,7 @@
     justify-content: center;
   }
 
-  .modal-overlay.active {
-    display: flex;
-  }
+  .modal-overlay.active { display: flex; }
 
   .modal {
     background: var(--crema);
@@ -585,14 +519,16 @@
     overflow-y: auto;
     border-top: 6px solid var(--rojo);
     padding: 20px 16px 32px;
+    position: relative;
   }
 
   .modal-masthead {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 28px;
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
     color: var(--rojo);
     text-shadow: 2px 2px 0 var(--negro);
     margin-bottom: 4px;
+    text-transform: uppercase;
   }
 
   .modal-sub {
@@ -606,9 +542,7 @@
     padding-bottom: 10px;
   }
 
-  .form-field {
-    margin-bottom: 12px;
-  }
+  .form-field { margin-bottom: 12px; }
 
   .form-label {
     font-family: 'Oswald', sans-serif;
@@ -632,24 +566,34 @@
     -webkit-appearance: none;
   }
 
-  .form-input:focus {
-    border-color: var(--rojo);
-  }
+  .form-input:focus { border-color: var(--rojo); }
 
   .modal-close {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    top: 14px; right: 14px;
     background: var(--negro);
     color: var(--crema);
     border: none;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 18px;
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
     padding: 4px 10px;
     cursor: pointer;
   }
 
-  /* FOOTER */
+  .success-msg {
+    display: none;
+    background: var(--rojo);
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px;
+    border: 3px solid var(--negro);
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   footer {
     background: var(--negro);
     padding: 16px 12px;
@@ -657,44 +601,27 @@
   }
 
   .footer-title {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 36px;
     color: var(--rojo);
     text-shadow: 2px 2px 0 var(--amarillo);
     margin-bottom: 4px;
+    text-transform: uppercase;
   }
 
   .footer-legal {
     font-family: 'Special Elite', serif;
     font-size: 9px;
     color: #666;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-top: 8px;
   }
 
-  .footer-legal a {
-    color: var(--amarillo);
-    text-decoration: none;
-  }
-
-  /* SUCCESS STATE */
-  .success-msg {
-    display: none;
-    background: var(--rojo);
-    color: white;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-    text-align: center;
-    padding: 14px;
-    border: 3px solid var(--negro);
-    margin-top: 10px;
-    letter-spacing: 1px;
-  }
+  .footer-legal a { color: var(--amarillo); text-decoration: none; }
 </style>
 </head>
 <body>
 
-<!-- MASTHEAD -->
 <header>
   <div class="masthead-top">
     <span>Ciudad de México · 2026</span>
@@ -707,25 +634,18 @@
   </div>
 </header>
 
-<!-- BREAKING NEWS -->
+<!-- BREAKING — sin Telmex, operadoras genéricas -->
 <div class="breaking">
   <div class="breaking-tag">ÚLTIMA HORA</div>
-  <div class="breaking-text">Ya no necesitas Telcel, AT&T, ni Telmex · Un solo pago · Tu número nunca muere · Sin mensualidad · Sin SIM · Donde haya internet, ahí está tu número &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div class="breaking-text">Ya no necesitas ninguna operadora · Un solo pago · Tu número nunca muere · Sin mensualidad · Sin SIM · Sin Telcel · Sin AT&T · Sin Movistar · Sin Bait · Donde haya internet, ahí está tu número &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
 
-<!-- HERO -->
+<!-- HERO — foto calle CDMX alta calidad Unsplash -->
 <div class="hero">
-  <!-- IMAGE ZONE A: Hero principal — Foto de calle, barrio, personas reales. Reemplazar con foto propia. Recomendado: 800x680px, alto contraste -->
-  <img 
-    class="img-zone"
-    src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80"
-    alt="Personas del barrio con sus teléfonos"
-    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-  >
-  <div class="img-placeholder" style="display:none">
-    <span class="zone-label">ZONA DE IMAGEN A</span>
-    <span>Foto de calle · Barrio · Alto contraste<br>Reemplazar con foto propia<br>800×680px</span>
-  </div>
+  <img
+    src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?w=800&q=85"
+    alt="Calle de la Ciudad de México"
+    onerror="this.src='https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=85'">
   <div class="hero-overlay">
     <div class="hero-hed">¡SE ACABÓ PAGAR CADA MES!</div>
     <div class="hero-deck">Un número tuyo · para siempre · desde $199 pesos</div>
@@ -736,48 +656,39 @@
   </div>
 </div>
 
-<!-- NEWSPAPER COLUMNS -->
+<!-- NEWSPAPER -->
 <div class="newspaper">
   <div class="col-full">
     <div class="section-label">La Historia</div>
     <hr class="section-rule">
   </div>
 
-  <!-- COL 1 -->
   <div>
     <div class="article-hed">TU NÚMERO YA NO DEPENDE DE NADIE</div>
     <div class="article-body">
       Un número de teléfono real. Tuyo. Para siempre. Sin mensualidad. Sin contrato. Sin operadora que te corte si no pagas.
-      Donde haya internet — WiFi, datos, lo que sea — tu número funciona.
     </div>
-    <!-- IMAGE ZONE B: Foto vertical — mano con teléfono, calle de fondo. 300x220px -->
-    <div class="photo-card" style="margin-top:8px">
-      <img class="photo-card-img"
-        src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80"
-        alt="Teléfono en mano"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="photo-card-placeholder" style="display:none">
-        <span style="font-family:Oswald,sans-serif;font-size:9px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1px;text-align:center;padding:0 8px">ZONA B · Mano + teléfono · 300×220px</span>
-      </div>
+    <div class="photo-card">
+      <!-- Foto: persona en mercado con celular, CDMX -->
+      <img
+        src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?w=400&q=85"
+        alt="Persona con teléfono en la calle"
+        onerror="this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=85'">
       <div class="photo-card-caption">Tu número · En tu mano · Para siempre</div>
     </div>
   </div>
 
-  <!-- COL 2 -->
   <div>
     <div class="article-hed">SIN SIM. SIN CONTRATO. SIN ROLLO.</div>
     <div class="article-body">
-      Descarga la app. Activa tu número. Listo. WhatsApp, bancos, Uber, Rappi — todo funciona con tu nuevo número. Una vez. Gratis para siempre después.
+      Descarga la app. Activa tu número. Listo. WhatsApp, bancos, Uber, Rappi — todo funciona. Una vez. Gratis después.
     </div>
-    <!-- IMAGE ZONE C: Foto cuadrada — tienda de barrio, puesto, calle. 300x220px -->
-    <div class="photo-card" style="margin-top:8px">
-      <img class="photo-card-img"
-        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80"
-        alt="Barrio mexicano"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="photo-card-placeholder" style="display:none">
-        <span style="font-family:Oswald,sans-serif;font-size:9px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1px;text-align:center;padding:0 8px">ZONA C · Tienda · Barrio · 300×220px</span>
-      </div>
+    <div class="photo-card">
+      <!-- Foto: tianguis o tienda de barrio -->
+      <img
+        src="https://images.unsplash.com/photo-1531219572328-a0171b4448a3?w=400&q=85"
+        alt="Tiendita de barrio"
+        onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=85'">
       <div class="photo-card-caption">Disponible donde tú estás</div>
     </div>
   </div>
@@ -791,12 +702,12 @@
     <li>Funciona con cualquier internet — WiFi, datos, lo que tengas</li>
     <li>WhatsApp, bancos, Uber, Rappi — reconexión automática</li>
     <li>Funciona en tu cel, tablet, lo que sea</li>
-    <li>Sin operadora, sin Telcel, sin Telmex, sin nadie</li>
+    <li>Sin Telcel, sin AT&T, sin Movistar, sin nadie</li>
     <li>Sub-líneas para tu familia — cada quien su número</li>
   </ul>
 </div>
 
-<!-- CLASIFICADOS / PRECIOS -->
+<!-- CLASIFICADOS -->
 <div class="clasificados">
   <div class="clasificados-header">— CLASIFICADOS / PRECIOS —</div>
   <div class="precio-grid">
@@ -806,9 +717,9 @@
       <div class="precio-desc">App + número nuevo · 1 dispositivo · Para siempre</div>
     </div>
     <div class="precio-card">
-      <div class="precio-nombre">Con Telmex</div>
+      <div class="precio-nombre">En Casa</div>
       <div class="precio-monto">$299<span> MXN</span></div>
-      <div class="precio-desc">Conecta tu línea existente · software únicamente</div>
+      <div class="precio-desc">Conecta tu línea fija existente · solo software</div>
     </div>
     <div class="precio-card">
       <div class="precio-nombre">Familiar</div>
@@ -816,7 +727,7 @@
       <div class="precio-desc">Línea colectiva + 2 sub-líneas · 3 dispositivos</div>
     </div>
     <div class="precio-card">
-      <div class="precio-nombre">Familia Plus</div>
+      <div class="precio-nombre">Familia+</div>
       <div class="precio-monto">$999<span> MXN</span></div>
       <div class="precio-desc">Línea colectiva + 4 sub-líneas · 5 dispositivos</div>
     </div>
@@ -828,14 +739,11 @@
   <div class="test-header">— LO QUE DICE LA GENTE —</div>
 
   <div class="testimonio">
-    <!-- IMAGE ZONE D: Retrato cuadrado · persona real · barrio · 108x108px -->
+    <!-- Foto: hombre adulto, México, barrio — Unsplash -->
     <img class="test-foto"
-      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+      src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&q=85"
       alt="Don Memo"
-      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="test-foto-placeholder" style="display:none">
-      <span style="font-family:Oswald,sans-serif;font-size:7px;color:rgba(255,255,255,0.5);text-transform:uppercase;text-align:center">ZONA D<br>108×108</span>
-    </div>
+      onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=85'">
     <div class="test-texto">
       <div class="test-quote">"Me cortaron el Telcel porque no pagué y perdí mi número de 10 años. Con El Diablito eso ya no me pasa. Pagué una vez y ya."</div>
       <div class="test-nombre">— Don Memo, Tepito · Usuario desde 2026</div>
@@ -843,14 +751,11 @@
   </div>
 
   <div class="testimonio">
-    <!-- IMAGE ZONE E: Retrato cuadrado · mujer · mercado · 108x108px -->
+    <!-- Foto: mujer adulta mayor, México — Unsplash -->
     <img class="test-foto"
-      src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80"
+      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=85"
       alt="Doña Caro"
-      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="test-foto-placeholder" style="display:none">
-      <span style="font-family:Oswald,sans-serif;font-size:7px;color:rgba(255,255,255,0.5);text-transform:uppercase;text-align:center">ZONA E<br>108×108</span>
-    </div>
+      onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=85'">
     <div class="test-texto">
       <div class="test-quote">"Mis hijos me pusieron El Diablito. Ahora todos me llaman al mismo número aunque estén en otro país."</div>
       <div class="test-nombre">— Doña Caro, Iztapalapa · Usuaria desde 2026</div>
@@ -866,24 +771,22 @@
   <a href="tel:+16203830333" class="btn-secundario">📞 Llámanos: +1 620 383 0333</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-title">EL DIABLITO</div>
   <div style="font-family:'Oswald',sans-serif;font-size:10px;color:#888;letter-spacing:3px;text-transform:uppercase">Tu número · Para siempre</div>
   <div class="footer-legal">
     © 2026 · Todos los derechos reservados<br>
     <a href="#">Aviso de Privacidad</a> · <a href="#">Términos de Uso</a><br>
-    WhatsApp® es marca registrada de Meta Platforms, Inc. El Diablito no tiene afiliación con WhatsApp ni Meta.
+    WhatsApp® es marca registrada de Meta Platforms, Inc. Uber® es marca registrada de Uber Technologies, Inc. Rappi® es marca registrada de Rappi S.A.S. Telcel®, AT&T®, Movistar® y Bait® son marcas registradas de sus respectivos dueños. El Diablito no tiene afiliación con ninguna de estas empresas.
   </div>
 </footer>
 
-<!-- MODAL RESERVA -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modal" onclick="cerrarSiOverlay(event)">
   <div class="modal">
     <button class="modal-close" onclick="cerrarModal()">✕ CERRAR</button>
     <div class="modal-masthead">RESERVA TU NÚMERO</div>
     <div class="modal-sub">Un solo pago · Gratis para siempre después</div>
-
     <form id="reserva-form" action="https://formspree.io/f/XXXXXXXX" method="POST" onsubmit="enviarForm(event)">
       <div class="form-field">
         <label class="form-label">Tu nombre</label>
@@ -897,7 +800,7 @@
         <label class="form-label">¿Qué plan te late?</label>
         <select class="form-input" name="plan">
           <option value="digital">Digital — $199 MXN</option>
-          <option value="telmex">Con Telmex — $299 MXN</option>
+          <option value="casa">En Casa — $299 MXN</option>
           <option value="familiar">Familiar — $799 MXN</option>
           <option value="familiaplus">Familia Plus — $999 MXN</option>
         </select>
@@ -931,7 +834,7 @@
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
-    }).then(r => {
+    }).then(() => {
       form.style.display = 'none';
       document.getElementById('success-msg').style.display = 'block';
     }).catch(() => {
@@ -939,12 +842,6 @@
       btn.disabled = false;
     });
   }
-  // Install PWA
-  let deferredPrompt;
-  window.addEventListener('beforeinstallprompt', e => {
-    e.preventDefault();
-    deferredPrompt = e;
-  });
 </script>
 </body>
 </html>
