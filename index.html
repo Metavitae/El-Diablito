@@ -352,7 +352,7 @@
   }
 
   .precio-card.destacado::before {
-    content: '★ LO MÁS PEDIDO';
+    content: attr(data-popular);
     position: absolute;
     top: -10px; left: 50%;
     transform: translateX(-50%);
@@ -716,20 +716,20 @@
 
 <header>
   <div class="masthead-top">
-    <span>Ciudad de México · 2026</span>
-    <span>Número 001</span>
-    <span>$199 MXN · Pago único</span>
+    <span id="mh-city">Ciudad de México · 2026</span>
+    <span id="mh-issue">Número 001</span>
+    <span id="mh-price">$199 MXN · Pago único</span>
   </div>
   <div class="masthead-title">
     <h1>EL DIABLITO</h1>
-    <div class="diablo-sub">Tu número de teléfono · Para siempre · Sin operadora</div>
+    <div class="diablo-sub" id="diablo-sub">Tu número de teléfono · Para siempre · Sin operadora</div>
   </div>
 </header>
 
 <!-- BREAKING — sin Telmex, operadoras genéricas -->
 <div class="breaking">
-  <div class="breaking-tag">ÚLTIMA HORA</div>
-  <div class="breaking-text">Ya no necesitas ninguna operadora · Un solo pago · Tu número nunca muere · Sin mensualidad · Sin SIM · Sin Telcel · Sin AT&T · Sin Movistar · Sin Bait · Donde haya internet, ahí está tu número &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div class="breaking-tag" id="breaking-tag">ÚLTIMA HORA</div>
+  <div class="breaking-text" id="breaking-text">Ya no necesitas ninguna operadora · Un solo pago · Tu número nunca muere · Sin mensualidad · Sin SIM · Sin Telcel · Sin AT&T · Sin Movistar · Sin Bait · Donde haya internet, ahí está tu número &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
 
 <!-- HERO — foto calle CDMX alta calidad Unsplash -->
@@ -739,49 +739,49 @@
     alt="Calle de la Ciudad de México"
     crossorigin="anonymous">
   <div class="hero-overlay">
-    <div class="hero-hed">¡SE ACABÓ PAGAR CADA MES!</div>
-    <div class="hero-deck">Un número tuyo · para siempre · desde $199 pesos</div>
+    <div class="hero-hed" id="hero-hed">¡SE ACABÓ PAGAR CADA MES!</div>
+    <div class="hero-deck" id="hero-deck">Un número tuyo · para siempre · desde $199 pesos</div>
   </div>
   <div class="hero-stamp">
     <div class="stamp-price">$199</div>
-    <div class="stamp-label">PAGO<br>ÚNICO</div>
+    <div class="stamp-label" id="stamp-label">PAGO<br>ÚNICO</div>
   </div>
 </div>
 
 <!-- NEWSPAPER -->
 <div class="newspaper">
   <div class="col-full">
-    <div class="section-label">La Historia</div>
+    <div class="section-label" id="sec-label-1">La Historia</div>
     <hr class="section-rule">
   </div>
 
   <div>
-    <div class="article-hed">TU NÚMERO YA NO DEPENDE DE NADIE</div>
-    <div class="article-body">
+    <div class="article-hed" id="art-hed-1">TU NÚMERO YA NO DEPENDE DE NADIE</div>
+    <div class="article-body" id="art-body-1">
       Un número de teléfono real. Tuyo. Para siempre. Sin mensualidad. Sin contrato. Sin operadora que te corte si no pagas.
     </div>
     <div class="photo-card">
       <div style="width:100%;height:120px;background:url('card1.jpg') center/cover;filter:contrast(1.2) saturate(0.7) sepia(0.1);"></div>
-      <div class="photo-card-caption">Tu número · En tu mano · Para siempre</div>
+      <div class="photo-card-caption" id="cap-1">Tu número · En tu mano · Para siempre</div>
     </div>
   </div>
 
   <div>
-    <div class="article-hed">SIN SIM. SIN CONTRATO. SIN ROLLO.</div>
-    <div class="article-body">
+    <div class="article-hed" id="art-hed-2">SIN SIM. SIN CONTRATO. SIN ROLLO.</div>
+    <div class="article-body" id="art-body-2">
       Descarga la app. Activa tu número. Listo. WhatsApp, bancos, Uber, Rappi — todo funciona. Una vez. Gratis después.
     </div>
     <div class="photo-card">
       <div style="width:100%;height:120px;background:url('https://picsum.photos/id/157/400/120') center/cover;filter:contrast(1.2) saturate(0.7) sepia(0.1);"></div>
-      <div class="photo-card-caption">Disponible donde tú estás</div>
+      <div class="photo-card-caption" id="cap-2">Disponible donde tú estás</div>
     </div>
   </div>
 </div>
 
 <!-- FEATURE STRIP -->
 <div class="feature-strip">
-  <h2>LO QUE INCLUYE TU NÚMERO</h2>
-  <ul class="feature-list">
+  <h2 id="feat-h2">LO QUE INCLUYE TU NÚMERO</h2>
+  <ul class="feature-list" id="feat-list">
     <li>Número real que nunca vence — un solo pago</li>
     <li>Funciona con cualquier internet — WiFi, datos, lo que tengas</li>
     <li>WhatsApp, bancos, Uber, Rappi — reconexión automática</li>
@@ -793,9 +793,9 @@
 
 <!-- CLASIFICADOS -->
 <div class="clasificados">
-  <div class="clasificados-header">— CLASIFICADOS / PRECIOS —</div>
+  <div class="clasificados-header" id="clasi-header">— CLASIFICADOS / PRECIOS —</div>
   <div class="precio-grid">
-    <div class="precio-card destacado">
+    <div class="precio-card destacado" data-popular="★ LO MÁS PEDIDO">
       <div class="precio-nombre">Digital</div>
       <div class="precio-monto">$199<span> MXN</span></div>
       <div class="precio-desc">App + número nuevo · 1 dispositivo · Para siempre</div>
@@ -820,49 +820,49 @@
 
 <!-- TESTIMONIOS -->
 <div class="testimonios">
-  <div class="test-header">— LO QUE DICE LA GENTE —</div>
+  <div class="test-header" id="test-header">— LO QUE DICE LA GENTE —</div>
 
   <div class="testimonio">
     <div class="test-foto" style="background:url('https://picsum.photos/id/1062/200/200') center/cover;"></div>
     <div class="test-texto">
-      <div class="test-quote">"Me cortaron el Telcel porque no pagué y perdí mi número de 10 años. Con El Diablito eso ya no me pasa. Pagué una vez y ya."</div>
-      <div class="test-nombre">— Don Memo, Tepito · Usuario desde 2026</div>
+      <div class="test-quote" id="test-q1">"Me cortaron el Telcel porque no pagué y perdí mi número de 10 años. Con El Diablito eso ya no me pasa. Pagué una vez y ya."</div>
+      <div class="test-nombre" id="test-n1">— Don Memo, Tepito · Usuario desde 2026</div>
     </div>
   </div>
 
   <div class="testimonio">
     <div class="test-foto" style="background:url('https://picsum.photos/id/1005/200/200') center/cover;"></div>
     <div class="test-texto">
-      <div class="test-quote">"Mis hijos me pusieron El Diablito. Ahora todos me llaman al mismo número aunque estén en otro país."</div>
-      <div class="test-nombre">— Doña Caro, Iztapalapa · Usuaria desde 2026</div>
+      <div class="test-quote" id="test-q2">"Mis hijos me pusieron El Diablito. Ahora todos me llaman al mismo número aunque estén en otro país."</div>
+      <div class="test-nombre" id="test-n2">— Doña Caro, Iztapalapa · Usuaria desde 2026</div>
     </div>
   </div>
 </div>
 
 <!-- CTA -->
 <div class="cta-section">
-  <div class="cta-hed">¿YA TE APUNTAS?</div>
-  <div class="cta-body">Reserva tu número hoy. Paga una vez. Tuyo para siempre.</div>
-  <a href="#" class="btn-principal" onclick="abrirModal(event)">QUIERO MI NÚMERO AHORITA</a>
-  <a href="tel:+16203830333" class="btn-secundario">📞 Llámanos: +1 620 383 0333</a>
+  <div class="cta-hed" id="cta-hed">¿YA TE APUNTAS?</div>
+  <div class="cta-body" id="cta-body">Reserva tu número hoy. Paga una vez. Tuyo para siempre.</div>
+  <a href="#" class="btn-principal" id="cta-btn1" onclick="abrirModal(event)">QUIERO MI NÚMERO AHORITA</a>
+  <a href="tel:+16203830333" class="btn-secundario" id="cta-btn2">📞 Llámanos: +1 620 383 0333</a>
 </div>
 
 <!-- CONTRASTE -->
 <div class="contraste">
   <div class="contraste-header">
-    <h2>— ¿CON QUIÉN ESTÁS? —</h2>
+    <h2 id="con-header">— ¿CON QUIÉN ESTÁS? —</h2>
   </div>
   <div class="contraste-grid">
-    <div class="contraste-col malo">
-      <div class="contraste-col-title">Con tu operadora</div>
+    <div class="contraste-col malo" id="con-malo">
+      <div class="contraste-col-title" id="con-malo-title">Con tu operadora</div>
       <div class="contraste-item"><span class="contraste-icon">✗</span><span>Te cobran cada mes aunque no uses el teléfono</span></div>
       <div class="contraste-item"><span class="contraste-icon">✗</span><span>Te cortan si no pagas — y pierdes tu número</span></div>
       <div class="contraste-item"><span class="contraste-icon">✗</span><span>Te piden contrato, INE, comprobante de domicilio</span></div>
       <div class="contraste-item"><span class="contraste-icon">✗</span><span>Necesitas SIM — si la pierdes, a empezar de nuevo</span></div>
       <div class="contraste-item"><span class="contraste-icon">✗</span><span>Suben el precio cuando se les antoja</span></div>
     </div>
-    <div class="contraste-col bueno">
-      <div class="contraste-col-title">Con El Diablito</div>
+    <div class="contraste-col bueno" id="con-bueno">
+      <div class="contraste-col-title" id="con-bueno-title">Con El Diablito</div>
       <div class="contraste-item"><span class="contraste-icon">✓</span><span>Pagas una vez. Ya. Nunca más.</span></div>
       <div class="contraste-item"><span class="contraste-icon">✓</span><span>Tu número es tuyo aunque no tengas un peso</span></div>
       <div class="contraste-item"><span class="contraste-icon">✓</span><span>Sin papeles. Sin contratos. Sin rollo.</span></div>
@@ -874,8 +874,8 @@
 
 <footer>
   <div class="footer-title">EL DIABLITO</div>
-  <div style="font-family:'Oswald',sans-serif;font-size:10px;color:#888;letter-spacing:3px;text-transform:uppercase">Tu número · Para siempre</div>
-  <div class="footer-legal">
+  <div id="footer-tagline" style="font-family:'Oswald',sans-serif;font-size:10px;color:#888;letter-spacing:3px;text-transform:uppercase">Tu número · Para siempre</div>
+  <div class="footer-legal" id="footer-legal">
     © 2026 · Todos los derechos reservados<br>
     <a href="#">Aviso de Privacidad</a> · <a href="#">Términos de Uso</a><br>
     WhatsApp® es marca registrada de Meta Platforms, Inc. Uber® es marca registrada de Uber Technologies, Inc. Rappi® es marca registrada de Rappi S.A.S. Telcel®, AT&T®, Movistar® y Bait® son marcas registradas de sus respectivos dueños. El Diablito no tiene afiliación con ninguna de estas empresas.
@@ -886,33 +886,182 @@
 <div class="modal-overlay" id="modal" onclick="cerrarSiOverlay(event)">
   <div class="modal">
     <button class="modal-close" onclick="cerrarModal()">✕ CERRAR</button>
-    <div class="modal-masthead">RESERVA TU NÚMERO</div>
-    <div class="modal-sub">Un solo pago · Gratis para siempre después</div>
-    <form id="reserva-form" action="https://formspree.io/f/XXXXXXXX" method="POST" onsubmit="enviarForm(event)">
+    <div class="modal-masthead" id="modal-title">RESERVA TU NÚMERO</div>
+    <div class="modal-sub" id="modal-sub">Un solo pago · Gratis para siempre después</div>
+    <form id="reserva-form" action="https://formspree.io/f/mnjkzoad" method="POST" onsubmit="enviarForm(event)">
       <div class="form-field">
-        <label class="form-label">Tu nombre</label>
-        <input class="form-input" type="text" name="nombre" placeholder="¿Cómo te llaman?" required>
+        <label class="form-label" id="lbl-nombre">Tu nombre</label>
+        <input class="form-input" id="inp-nombre" type="text" name="nombre" placeholder="¿Cómo te llaman?" required>
       </div>
       <div class="form-field">
-        <label class="form-label">Tu WhatsApp o email</label>
-        <input class="form-input" type="text" name="contacto" placeholder="Para avisarte cuando esté listo" required>
+        <label class="form-label" id="lbl-contacto">Tu WhatsApp o email</label>
+        <input class="form-input" id="inp-contacto" type="text" name="contacto" placeholder="Para avisarte cuando esté listo" required>
       </div>
       <div class="form-field">
-        <label class="form-label">¿Qué plan te late?</label>
-        <select class="form-input" name="plan">
+        <label class="form-label" id="lbl-plan">¿Qué plan te late?</label>
+        <select class="form-input" name="plan" id="plan-select">
           <option value="digital">Digital — $199 MXN</option>
           <option value="casa">En Casa — $299 MXN</option>
           <option value="familiar">Familiar — $799 MXN</option>
           <option value="familiaplus">Familia Plus — $999 MXN</option>
         </select>
       </div>
-      <button type="submit" class="btn-principal" style="margin-top:8px">APÚNTAME · YA MERO</button>
+      <button type="submit" class="btn-principal" id="modal-btn" style="margin-top:8px">APÚNTAME · YA MERO</button>
     </form>
     <div class="success-msg" id="success-msg">¡TE APUNTAMOS! · NOS PONEMOS EN CONTACTO</div>
   </div>
 </div>
 
 <script>
+// ─── TRANSLATIONS ─────────────────────────────────────────────────────────────
+const T = {
+  es: {
+    mh_city: 'Ciudad de México · 2026', mh_issue: 'Número 001', mh_price: '$199 MXN · Pago único',
+    diablo_sub: 'Tu número de teléfono · Para siempre · Sin operadora',
+    breaking_tag: 'ÚLTIMA HORA',
+    breaking_text: 'Ya no necesitas ninguna operadora · Un solo pago · Tu número nunca muere · Sin mensualidad · Sin SIM · Sin Telcel · Sin AT&T · Sin Movistar · Sin Bait · Donde haya internet, ahí está tu número      ',
+    hero_hed: '¡SE ACABÓ PAGAR CADA MES!',
+    hero_deck: 'Un número tuyo · para siempre · desde $199 pesos',
+    stamp_label: 'PAGO<br>ÚNICO',
+    sec_label_1: 'La Historia',
+    art_hed_1: 'TU NÚMERO YA NO DEPENDE DE NADIE',
+    art_body_1: 'Un número de teléfono real. Tuyo. Para siempre. Sin mensualidad. Sin contrato. Sin operadora que te corte si no pagas.',
+    cap_1: 'Tu número · En tu mano · Para siempre',
+    art_hed_2: 'SIN SIM. SIN CONTRATO. SIN ROLLO.',
+    art_body_2: 'Descarga la app. Activa tu número. Listo. WhatsApp, bancos, Uber, Rappi — todo funciona. Una vez. Gratis después.',
+    cap_2: 'Disponible donde tú estás',
+    feat_h2: 'LO QUE INCLUYE TU NÚMERO',
+    feat_items: ['Número real que nunca vence — un solo pago','Funciona con cualquier internet — WiFi, datos, lo que tengas','WhatsApp, bancos, Uber, Rappi — reconexión automática','Funciona en tu cel, tablet, lo que sea','Sin Telcel, sin AT&T, sin Movistar, sin nadie','Sub-líneas para tu familia — cada quien su número'],
+    clasi_header: '— CLASIFICADOS / PRECIOS —',
+    popular_label: '★ LO MÁS PEDIDO',
+    plan_names: ['Digital','En Casa','Familiar','Familia+'],
+    plan_prices: ['$199','$299','$799','$999'],
+    plan_descs: ['App + número nuevo · 1 dispositivo · Para siempre','Conecta tu línea fija existente · solo software','Línea colectiva + 2 sub-líneas · 3 dispositivos','Línea colectiva + 4 sub-líneas · 5 dispositivos'],
+    test_header: '— LO QUE DICE LA GENTE —',
+    test_q1: '"Me cortaron el Telcel porque no pagué y perdí mi número de 10 años. Con El Diablito eso ya no me pasa. Pagué una vez y ya."',
+    test_n1: '— Don Memo, Tepito · Usuario desde 2026',
+    test_q2: '"Mis hijos me pusieron El Diablito. Ahora todos me llaman al mismo número aunque estén en otro país."',
+    test_n2: '— Doña Caro, Iztapalapa · Usuaria desde 2026',
+    cta_hed: '¿YA TE APUNTAS?',
+    cta_body: 'Reserva tu número hoy. Paga una vez. Tuyo para siempre.',
+    cta_btn1: 'QUIERO MI NÚMERO AHORITA',
+    cta_btn2: '📞 Llámanos: +1 620 383 0333',
+    con_header: '— ¿CON QUIÉN ESTÁS? —',
+    con_malo_title: 'Con tu operadora',
+    con_malo_items: ['Te cobran cada mes aunque no uses el teléfono','Te cortan si no pagas — y pierdes tu número','Te piden contrato, INE, comprobante de domicilio','Necesitas SIM — si la pierdes, a empezar de nuevo','Suben el precio cuando se les antoja'],
+    con_bueno_title: 'Con El Diablito',
+    con_bueno_items: ['Pagas una vez. Ya. Nunca más.','Tu número es tuyo aunque no tengas un peso','Sin papeles. Sin contratos. Sin rollo.','Sin SIM. Donde haya internet, ahí estás.','El precio nunca cambia. Nunca.'],
+    footer_tagline: 'Tu número · Para siempre',
+    footer_legal: '© 2026 · Todos los derechos reservados<br><a href="#">Aviso de Privacidad</a> · <a href="#">Términos de Uso</a><br>WhatsApp® es marca registrada de Meta Platforms, Inc. Uber® es marca registrada de Uber Technologies, Inc. Rappi® es marca registrada de Rappi S.A.S. Telcel®, AT&T®, Movistar® y Bait® son marcas registradas de sus respectivos dueños. El Diablito no tiene afiliación con ninguna de estas empresas.',
+    modal_title: 'RESERVA TU NÚMERO', modal_sub: 'Un solo pago · Gratis para siempre después',
+    lbl_nombre: 'Tu nombre', ph_nombre: '¿Cómo te llaman?',
+    lbl_contacto: 'Tu WhatsApp o email', ph_contacto: 'Para avisarte cuando esté listo',
+    lbl_plan: '¿Qué plan te late?', modal_btn: 'APÚNTAME · YA MERO',
+    success_msg: '¡TE APUNTAMOS! · NOS PONEMOS EN CONTACTO'
+  },
+  en: {
+    mh_city: 'Mexico City · 2026', mh_issue: 'Issue 001', mh_price: '$199 MXN · One-time payment',
+    diablo_sub: 'Your phone number · Forever · No carrier needed',
+    breaking_tag: 'BREAKING',
+    breaking_text: 'No carrier required · One payment · Your number never dies · No monthly fee · No SIM card · No Telcel · No AT&T · No Movistar · No Bait · Wherever there is internet, your number works      ',
+    hero_hed: 'NO MORE PAYING EVERY MONTH!',
+    hero_deck: 'Your number · forever · from $199 pesos',
+    stamp_label: 'ONE<br>PAYMENT',
+    sec_label_1: 'The Story',
+    art_hed_1: 'YOUR NUMBER NO LONGER DEPENDS ON ANYONE',
+    art_body_1: 'A real phone number. Yours. Forever. No monthly bill. No contract. No carrier that cuts you off the moment you stop paying.',
+    cap_1: 'Your number · In your hands · Forever',
+    art_hed_2: 'NO SIM. NO CONTRACT. NO HASSLE.',
+    art_body_2: 'Download the app. Activate your number. Done. WhatsApp, banking, Uber, Rappi — everything works. Pay once. Free forever after.',
+    cap_2: 'Available wherever you are',
+    feat_h2: "WHAT'S INCLUDED WITH YOUR NUMBER",
+    feat_items: ['A real number that never expires — one payment','Works on any internet — WiFi, mobile data, whatever you have','WhatsApp, banking, Uber, Rappi — automatic reconnection','Works on your phone, tablet, any device','No Telcel, no AT&T, no Movistar, no one','Family sub-lines — each member gets their own number'],
+    clasi_header: '— CLASSIFIEDS / PRICING —',
+    popular_label: '★ MOST POPULAR',
+    plan_names: ['Digital','Home','Family','Family+'],
+    plan_prices: ['$199','$299','$799','$999'],
+    plan_descs: ['App + new number · 1 device · Forever','Connect your existing landline · software only','Collective line + 2 sub-lines · 3 devices','Collective line + 4 sub-lines · 5 devices'],
+    test_header: '— WHAT PEOPLE ARE SAYING —',
+    test_q1: '"Telcel cut me off because I missed a payment and I lost my number of 10 years. With El Diablito that can\'t happen anymore. I paid once and that\'s it."',
+    test_n1: '— Don Memo, Tepito · User since 2026',
+    test_q2: '"My kids set me up with El Diablito. Now they all call me on the same number no matter what country they\'re in."',
+    test_n2: '— Doña Caro, Iztapalapa · User since 2026',
+    cta_hed: 'ARE YOU IN?',
+    cta_body: 'Reserve your number today. Pay once. Yours forever.',
+    cta_btn1: 'I WANT MY NUMBER NOW',
+    cta_btn2: '📞 Call us: +1 620 383 0333',
+    con_header: '— WHOSE SIDE ARE YOU ON? —',
+    con_malo_title: 'With your carrier',
+    con_malo_items: ['They charge you every month even when you barely use it','They cut you off if you miss a payment — and you lose your number','They demand contracts, ID, and proof of address','You need a SIM — lose it and you start from zero','They raise prices whenever they feel like it'],
+    con_bueno_title: 'With El Diablito',
+    con_bueno_items: ['Pay once. Done. Never again.','Your number is yours even if you\'re flat broke','No paperwork. No contracts. No hassle.','No SIM. Wherever there\'s internet, you\'re there.','The price never changes. Ever.'],
+    footer_tagline: 'Your number · Forever',
+    footer_legal: '© 2026 · All rights reserved<br><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a><br>WhatsApp® is a registered trademark of Meta Platforms, Inc. Uber® is a registered trademark of Uber Technologies, Inc. Rappi® is a registered trademark of Rappi S.A.S. Telcel®, AT&T®, Movistar® and Bait® are registered trademarks of their respective owners. El Diablito has no affiliation with any of these companies.',
+    modal_title: 'RESERVE YOUR NUMBER', modal_sub: 'One payment · Free forever after',
+    lbl_nombre: 'Your name', ph_nombre: 'What do people call you?',
+    lbl_contacto: 'Your WhatsApp or email', ph_contacto: "We'll let you know when it's ready",
+    lbl_plan: 'Which plan works for you?', modal_btn: 'SIGN ME UP · RIGHT NOW',
+    success_msg: "YOU'RE IN! · WE'LL BE IN TOUCH"
+  }
+};
+
+// ─── RENDER PAGE ──────────────────────────────────────────────────────────────
+function renderPage(lang) {
+  const t = T[lang] || T.es;
+  const s = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  const h = (id, v) => { const el = document.getElementById(id); if (el) el.innerHTML = v; };
+
+  document.documentElement.lang = lang;
+
+  s('mh-city', t.mh_city); s('mh-issue', t.mh_issue); s('mh-price', t.mh_price);
+  s('diablo-sub', t.diablo_sub);
+  s('breaking-tag', t.breaking_tag); s('breaking-text', t.breaking_text);
+  s('hero-hed', t.hero_hed); s('hero-deck', t.hero_deck);
+  h('stamp-label', t.stamp_label);
+  s('sec-label-1', t.sec_label_1);
+  s('art-hed-1', t.art_hed_1); s('art-body-1', t.art_body_1); s('cap-1', t.cap_1);
+  s('art-hed-2', t.art_hed_2); s('art-body-2', t.art_body_2); s('cap-2', t.cap_2);
+  s('feat-h2', t.feat_h2);
+  const featList = document.getElementById('feat-list');
+  if (featList) featList.innerHTML = t.feat_items.map(item => `<li>${item}</li>`).join('');
+  s('clasi-header', t.clasi_header);
+  document.querySelectorAll('.precio-card').forEach((card, i) => {
+    const n = card.querySelector('.precio-nombre'); if (n) n.textContent = t.plan_names[i];
+    const d = card.querySelector('.precio-desc');   if (d) d.textContent = t.plan_descs[i];
+    if (card.classList.contains('destacado')) card.dataset.popular = t.popular_label;
+  });
+  const planSelect = document.getElementById('plan-select');
+  if (planSelect) {
+    const vals = ['digital','casa','familiar','familiaplus'];
+    planSelect.innerHTML = t.plan_names.map((name, i) =>
+      `<option value="${vals[i]}">${name} — ${t.plan_prices[i]} MXN</option>`).join('');
+  }
+  s('test-header', t.test_header);
+  s('test-q1', t.test_q1); s('test-n1', t.test_n1);
+  s('test-q2', t.test_q2); s('test-n2', t.test_n2);
+  s('cta-hed', t.cta_hed); s('cta-body', t.cta_body);
+  s('cta-btn1', t.cta_btn1); s('cta-btn2', t.cta_btn2);
+  s('con-header', t.con_header);
+  s('con-malo-title', t.con_malo_title); s('con-bueno-title', t.con_bueno_title);
+  document.querySelectorAll('#con-malo .contraste-item span:last-child').forEach((el, i) => { if (t.con_malo_items[i]) el.textContent = t.con_malo_items[i]; });
+  document.querySelectorAll('#con-bueno .contraste-item span:last-child').forEach((el, i) => { if (t.con_bueno_items[i]) el.textContent = t.con_bueno_items[i]; });
+  s('footer-tagline', t.footer_tagline); h('footer-legal', t.footer_legal);
+  s('modal-title', t.modal_title); s('modal-sub', t.modal_sub);
+  s('lbl-nombre', t.lbl_nombre); s('lbl-contacto', t.lbl_contacto); s('lbl-plan', t.lbl_plan);
+  const iNombre = document.getElementById('inp-nombre'); if (iNombre) iNombre.placeholder = t.ph_nombre;
+  const iContacto = document.getElementById('inp-contacto'); if (iContacto) iContacto.placeholder = t.ph_contacto;
+  s('modal-btn', t.modal_btn);
+  s('success-msg', t.success_msg);
+}
+
+function detectLang() {
+  const lang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'es').toLowerCase();
+  return lang.startsWith('es') || lang.startsWith('pt') ? 'es' : 'en';
+}
+
+renderPage(detectLang());
+
+// ─── MODAL ────────────────────────────────────────────────────────────────────
   function abrirModal(e) {
     e.preventDefault();
     document.getElementById('modal').classList.add('active');
