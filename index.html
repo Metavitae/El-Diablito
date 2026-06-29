@@ -55,7 +55,7 @@
 
   .masthead-top span {
     font-family: 'Oswald', sans-serif;
-    font-size: 9px;
+    font-size: 11px;
     color: var(--amarillo);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -83,44 +83,51 @@
 
   .masthead-title .diablo-sub {
     font-family: 'Oswald', sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--crema);
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-top: 4px;
   }
 
   /* BREAKING BANNER */
-  .breaking {
-    background: var(--amarillo);
-    border-top: 3px solid var(--negro);
-    border-bottom: 3px solid var(--negro);
-    padding: 6px 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    overflow: hidden;
-  }
+
 
   .breaking-tag {
     background: var(--rojo);
     color: white;
     font-family: 'Anton', sans-serif;
     font-size: 14px;
-    padding: 2px 8px;
+    padding: 4px 10px;
     white-space: nowrap;
     flex-shrink: 0;
     border: 2px solid var(--negro);
+    position: relative;
+    z-index: 2;
+    box-shadow: 3px 0 8px rgba(0,0,0,0.4);
+  }
+
+  .breaking {
+    background: var(--amarillo);
+    border-top: 3px solid var(--negro);
+    border-bottom: 3px solid var(--negro);
+    padding: 6px 0 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+    position: relative;
   }
 
   .breaking-text {
     font-family: 'Oswald', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--negro);
     text-transform: uppercase;
     white-space: nowrap;
     animation: marquee 18s linear infinite;
+    padding-left: 16px;
   }
 
   @keyframes marquee {
@@ -163,7 +170,7 @@
 
   .hero-deck {
     font-family: 'Oswald', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--amarillo);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -193,7 +200,7 @@
 
   .stamp-label {
     font-family: 'Oswald', sans-serif;
-    font-size: 8px;
+    font-size: 10px;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -219,8 +226,8 @@
 
   .section-label {
     font-family: 'Anton', sans-serif;
-    font-size: 10px;
-    letter-spacing: 3px;
+    font-size: 12px;
+    letter-spacing: 2px;
     color: var(--rojo);
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -237,7 +244,7 @@
 
   .article-body {
     font-family: 'Special Elite', serif;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.5;
     color: var(--tinta);
   }
@@ -262,8 +269,8 @@
     background: var(--negro);
     color: var(--crema);
     font-family: 'Oswald', sans-serif;
-    font-size: 9px;
-    padding: 4px 6px;
+    font-size: 11px;
+    padding: 5px 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -290,7 +297,7 @@
 
   .feature-list li {
     font-family: 'Oswald', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     color: white;
     display: flex;
     align-items: flex-start;
@@ -377,7 +384,7 @@
 
   .precio-desc {
     font-family: 'Special Elite', serif;
-    font-size: 9px;
+    font-size: 11px;
     color: var(--gris);
     margin-top: 4px;
     line-height: 1.4;
@@ -422,7 +429,7 @@
   .test-quote {
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--crema);
     line-height: 1.5;
     margin-bottom: 4px;
@@ -430,7 +437,7 @@
 
   .test-nombre {
     font-family: 'Oswald', sans-serif;
-    font-size: 9px;
+    font-size: 11px;
     color: var(--amarillo);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -457,49 +464,64 @@
 
   .cta-body {
     font-family: 'Special Elite', serif;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--tinta);
     margin-bottom: 14px;
     line-height: 1.5;
   }
 
+  /* ED BUTTONS — stamp energy, offset shadow, street poster raw */
   .btn-principal {
     display: block;
     width: 100%;
     background: var(--rojo);
-    color: white;
+    color: var(--amarillo);
     font-family: 'Anton', sans-serif;
-    font-size: 22px;
-    letter-spacing: 1px;
-    padding: 14px;
-    border: 4px solid var(--negro);
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding: 16px 14px;
+    border: 5px solid var(--negro);
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 4px 4px 0 var(--negro);
+    box-shadow: 6px 6px 0 var(--negro);
     transition: transform 0.1s, box-shadow 0.1s;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-transform: uppercase;
+    text-align: center;
+    position: relative;
+  }
+
+  .btn-principal::before {
+    content: '★ ';
+    color: var(--amarillo);
+  }
+
+  .btn-principal::after {
+    content: ' ★';
+    color: var(--amarillo);
   }
 
   .btn-principal:active {
-    transform: translate(2px,2px);
-    box-shadow: 2px 2px 0 var(--negro);
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--negro);
   }
 
   .btn-secundario {
     display: block;
     width: 100%;
-    background: transparent;
+    background: var(--amarillo);
     color: var(--negro);
     font-family: 'Oswald', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px;
-    border: 3px solid var(--negro);
+    letter-spacing: 3px;
+    padding: 12px 14px;
+    border: 4px solid var(--negro);
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
   }
 
   /* MODAL */
@@ -549,7 +571,7 @@
 
   .form-label {
     font-family: 'Oswald', sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--negro);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -596,6 +618,73 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+
+  /* CONTRAST STRIP */
+  .contraste {
+    border-top: 4px solid var(--negro);
+    border-bottom: 4px solid var(--negro);
+  }
+
+  .contraste-header {
+    background: var(--negro);
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .contraste-header h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    color: var(--amarillo);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .contraste-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contraste-col {
+    padding: 16px 14px;
+  }
+
+  .contraste-col.malo {
+    background: #f5f0e8;
+    border-right: 3px solid var(--negro);
+  }
+
+  .contraste-col.bueno {
+    background: var(--amarillo);
+  }
+
+  .contraste-col-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--negro);
+  }
+
+  .contraste-col.malo .contraste-col-title { color: var(--rojo); }
+  .contraste-col.bueno .contraste-col-title { color: var(--negro); }
+
+  .contraste-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-family: 'Special Elite', serif;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .contraste-col.malo .contraste-item { color: var(--gris); }
+  .contraste-col.bueno .contraste-item { color: var(--negro); font-weight: 600; }
+
+  .contraste-icon { flex-shrink: 0; font-size: 13px; margin-top: 1px; }
 
   footer {
     background: var(--negro);
@@ -758,6 +847,31 @@
   <a href="tel:+16203830333" class="btn-secundario">📞 Llámanos: +1 620 383 0333</a>
 </div>
 
+<!-- CONTRASTE -->
+<div class="contraste">
+  <div class="contraste-header">
+    <h2>— ¿CON QUIÉN ESTÁS? —</h2>
+  </div>
+  <div class="contraste-grid">
+    <div class="contraste-col malo">
+      <div class="contraste-col-title">Con tu operadora</div>
+      <div class="contraste-item"><span class="contraste-icon">✗</span><span>Te cobran cada mes aunque no uses el teléfono</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✗</span><span>Te cortan si no pagas — y pierdes tu número</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✗</span><span>Te piden contrato, INE, comprobante de domicilio</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✗</span><span>Necesitas SIM — si la pierdes, a empezar de nuevo</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✗</span><span>Suben el precio cuando se les antoja</span></div>
+    </div>
+    <div class="contraste-col bueno">
+      <div class="contraste-col-title">Con El Diablito</div>
+      <div class="contraste-item"><span class="contraste-icon">✓</span><span>Pagas una vez. Ya. Nunca más.</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✓</span><span>Tu número es tuyo aunque no tengas un peso</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✓</span><span>Sin papeles. Sin contratos. Sin rollo.</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✓</span><span>Sin SIM. Donde haya internet, ahí estás.</span></div>
+      <div class="contraste-item"><span class="contraste-icon">✓</span><span>El precio nunca cambia. Nunca.</span></div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="footer-title">EL DIABLITO</div>
   <div style="font-family:'Oswald',sans-serif;font-size:10px;color:#888;letter-spacing:3px;text-transform:uppercase">Tu número · Para siempre</div>
@@ -792,7 +906,7 @@
           <option value="familiaplus">Familia Plus — $999 MXN</option>
         </select>
       </div>
-      <button type="submit" class="btn-principal" style="margin-top:8px;border:none">APÚNTAME · YA MERO</button>
+      <button type="submit" class="btn-principal" style="margin-top:8px">APÚNTAME · YA MERO</button>
     </form>
     <div class="success-msg" id="success-msg">¡TE APUNTAMOS! · NOS PONEMOS EN CONTACTO</div>
   </div>
